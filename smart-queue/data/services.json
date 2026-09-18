@@ -1,0 +1,9 @@
+[
+  {
+    "id" : "service-1",
+    "name" : "General Service",
+    "description" : "General customer service",
+    "averageServiceTime" : 10,
+    "active" : true
+  }
+]

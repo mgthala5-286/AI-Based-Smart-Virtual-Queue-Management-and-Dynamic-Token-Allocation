@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Smart Queue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="brand-link" href="admin-dashboard.html">Smart Queue</a>
+    <div class="header-actions">
+        <span id="header-user-name" class="user-label"></span>
+        <button id="logout-button" class="button ghost" type="button">Logout</button>
+    </div>
+</header>
+<main class="page-shell">
+    <div id="admin-message" class="message" role="status" aria-live="polite"></div>
+    <section class="section-heading">
+        <div>
+            <p class="eyebrow">System control</p>
+            <h1>Admin dashboard</h1>
+        </div>
+    </section>
+
+    <section class="content-section two-column admin-forms">
+        <form id="service-form" class="panel stack-form">
+            <div class="section-title-row"><div><p class="eyebrow">Configuration</p><h2 id="service-form-title">Add service</h2></div></div>
+            <input id="service-id" type="hidden">
+            <label for="service-name">Service name</label>
+            <input id="service-name" type="text" required>
+            <label for="service-description">Description</label>
+            <textarea id="service-description" rows="3"></textarea>
+            <label for="service-average-time">Average service time (minutes)</label>
+            <input id="service-average-time" type="number" min="1" required>
+            <label class="checkbox-label"><input id="service-active" type="checkbox" checked> Active</label>
+            <div class="form-actions"><button class="button primary" type="submit">Save service</button><button id="service-cancel-edit" class="button secondary hidden" type="button">Cancel edit</button></div>
+        </form>
+        <form id="counter-form" class="panel stack-form">
+            <div class="section-title-row"><div><p class="eyebrow">Capacity</p><h2 id="counter-form-title">Add counter</h2></div></div>
+            <input id="counter-id" type="hidden">
+            <label for="counter-number">Counter number</label>
+            <input id="counter-number" type="number" min="1" required>
+            <label for="counter-service">Service</label>
+            <select id="counter-service" required></select>
+            <label class="checkbox-label"><input id="counter-active" type="checkbox" checked> Active</label>
+            <div class="form-actions"><button class="button primary" type="submit">Save counter</button><button id="counter-cancel-edit" class="button secondary hidden" type="button">Cancel edit</button></div>
+        </form>
+    </section>
+
+    <section class="content-section panel">
+        <div class="section-title-row"><div><p class="eyebrow">Manage offerings</p><h2>Services</h2></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Name</th><th>Description</th><th>Average time</th><th>Status</th><th></th></tr></thead><tbody id="admin-services-body"></tbody></table></div>
+        <div id="admin-services-empty" class="empty-table">No services found.</div>
+    </section>
+
+    <section class="content-section panel">
+        <div class="section-title-row"><div><p class="eyebrow">Manage capacity</p><h2>Counters</h2></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Number</th><th>Service</th><th>Status</th><th></th></tr></thead><tbody id="admin-counters-body"></tbody></table></div>
+        <div id="admin-counters-empty" class="empty-table">No counters found.</div>
+    </section>
+</main>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

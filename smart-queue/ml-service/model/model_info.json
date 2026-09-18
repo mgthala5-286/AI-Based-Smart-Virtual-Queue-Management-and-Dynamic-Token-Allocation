@@ -1,0 +1,14 @@
+{
+  "model": "RandomForestRegressor",
+  "datasetSize": 5000,
+  "features": [
+    "queueSize",
+    "tokensAhead",
+    "activeCounters",
+    "averageServiceTime",
+    "hourOfDay"
+  ],
+  "mae": 3.220750400000001,
+  "rmse": 6.720171908345796,
+  "r2": 0.9963572338150956
+}

@@ -1,0 +1,11 @@
+[ {
+  "id" : "counter-1",
+  "counterNumber" : 1,
+  "serviceId" : "service-1",
+  "active" : true
+}, {
+  "id" : "counter-2",
+  "counterNumber" : 2,
+  "serviceId" : "service-1",
+  "active" : true
+} ]

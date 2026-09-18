@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Queue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="landing-page">
+<main class="landing-shell">
+    <section class="hero-card">
+        <p class="eyebrow">AI-Based Virtual Queue</p>
+        <h1>Smart Queue</h1>
+        <p class="hero-copy">Join a service queue, follow your position, and spend less time waiting in line.</p>
+        <div class="hero-actions">
+            <a class="button primary" href="login.html">Login</a>
+            <a class="button secondary" href="register.html">Create account</a>
+        </div>
+    </section>
+</main>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const session = SmartQueueAuth.getSession();
+        if (session) {
+            SmartQueueAuth.redirectByRole(session.role);
+        }
+    });
+</script>
+</body>
+</html>

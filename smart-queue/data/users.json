@@ -1,0 +1,13 @@
+[ {
+  "id" : "19bb566e-fa0f-4641-84f1-64f8c9998586",
+  "name" : "Smart Queue Admin",
+  "email" : "admin@smartqueue.com",
+  "password" : "$2a$10$tqeaRAcGbFbmZrmQy4PGTuwKvCd4hiCM1bg9YNeg/gwuCbQOPdg0i",
+  "role" : "ADMIN"
+}, {
+  "id" : "0066f933-0dac-4eb8-bb79-63fb65014327",
+  "name" : "Smart Queue Staff",
+  "email" : "staff@smartqueue.com",
+  "password" : "$2a$10$G7NmId3AYOw3LZKfCSXIre03s.CpUxWxL085g/vCLjTrXlKTMfIim",
+  "role" : "STAFF"
+} ]

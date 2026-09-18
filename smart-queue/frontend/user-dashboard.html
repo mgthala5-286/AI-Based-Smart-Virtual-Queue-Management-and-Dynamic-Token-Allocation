@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard | Smart Queue</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+    <a class="brand-link" href="user-dashboard.html">Smart Queue</a>
+    <div class="header-actions">
+        <span id="header-user-name" class="user-label"></span>
+        <button id="logout-button" class="button ghost" type="button">Logout</button>
+    </div>
+</header>
+<main class="page-shell">
+    <div id="user-message" class="message" role="status" aria-live="polite"></div>
+    <section class="section-heading">
+        <div>
+            <p class="eyebrow">Your queue companion</p>
+            <h1>User dashboard</h1>
+        </div>
+        <span class="live-pill"><span class="live-dot"></span> Live updates every 10 seconds</span>
+    </section>
+
+    <section id="my-token-panel" class="featured-card empty-state">
+        <p class="eyebrow">My token</p>
+        <h2>No active token selected</h2>
+        <p class="muted">Get a token from an available service to see your position here.</p>
+    </section>
+
+    <section class="content-section">
+        <div class="section-title-row">
+            <div>
+                <p class="eyebrow">Choose where to go</p>
+                <h2>Available services</h2>
+            </div>
+        </div>
+        <div id="services-list" class="card-grid"></div>
+    </section>
+
+    <section class="content-section two-column">
+        <div class="panel">
+            <div class="section-title-row">
+                <div>
+                    <p class="eyebrow">Live position</p>
+                    <h2>Current queue</h2>
+                </div>
+                <label class="compact-label" for="queue-service-select">Service
+                    <select id="queue-service-select"></select>
+                </label>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Token</th><th>Position</th><th>Status</th><th>Wait</th></tr></thead>
+                    <tbody id="queue-table-body"></tbody>
+                </table>
+            </div>
+            <div id="queue-empty" class="empty-table">Select a service to view its queue.</div>
+        </div>
+        <div id="my-position-panel" class="panel position-panel">
+            <p class="eyebrow">My token position</p>
+            <h2>Choose a token</h2>
+            <p class="muted">Your detailed position will appear here when you have an active token for this service.</p>
+        </div>
+    </section>
+
+    <section class="content-section panel">
+        <div class="section-title-row">
+            <div>
+                <p class="eyebrow">History</p>
+                <h2>My tokens</h2>
+            </div>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead><tr><th>Token</th><th>Service</th><th>Status</th><th>Position</th><th>Wait</th><th>Created</th><th></th></tr></thead>
+                <tbody id="tokens-table-body"></tbody>
+            </table>
+        </div>
+        <div id="tokens-empty" class="empty-table">No tokens yet.</div>
+    </section>
+</main>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/user.js"></script>
+</body>
+</html>

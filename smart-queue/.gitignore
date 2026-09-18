@@ -1,0 +1,7 @@
+backend/target/
+backend/.m2/
+ml-service/__pycache__/
+*.pyc
+*.log
+.env
+
